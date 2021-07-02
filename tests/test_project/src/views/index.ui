@@ -1,0 +1,27 @@
+<template>
+    <ColumnLayout>
+        <Label Text="less than 5" Pack.Fill="both" If="count < 5" />
+        <Label Text="{content}" Anchor="center" Pack.Fill="both" Pack.Expand="True" />
+        <RowLayout Pack.Fill="x">
+            <SB_Button Text="up" Command="count_up" Pack.Fill="both" Pack.Expand="True" Pack.Padx="0 5"></SB_Button>
+            <SB_Button Text="down" Command="count_down" Pack.Fill="both" Pack.Expand="True"></SB_Button>
+        </RowLayout>
+    </ColumnLayout>
+</template>
+
+<script>
+from ..components import SB_Button
+
+class Index(Component):
+    count = 0
+    content = "clicked 0 times!"
+
+    def count_up(self):
+        self.count += 1
+        self.content = f"clicked {self.count} times!"
+
+    def count_down(self):
+        if self.count > 0:
+            self.count -= 1
+            self.content = f"clicked {self.count} times!"
+</script>

@@ -1,0 +1,11 @@
+<template>
+    <ColumnLayout>
+        <RowLayout Pack.Fill="x">
+            <RouterLink To="/" Text="Index" />
+            <Separator Orient="vertical" Pack.Padx="5" />
+            <RouterLink To="/Widgets" Text="Widgets" />
+        </RowLayout>
+        <Separator Pack.Fill="x" />
+        <RouterView></RouterView>
+    </ColumnLayout>
+</template>

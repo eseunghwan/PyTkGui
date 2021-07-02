@@ -1,0 +1,15 @@
+<template>
+    <Button style="SB.TButton">
+    </Button>
+</template>
+
+<style>
+SB.TButton {
+    background: slateblue;
+    foreground: white;
+}
+
+SB.TButton:active {
+    background: indigo;
+}
+</style>

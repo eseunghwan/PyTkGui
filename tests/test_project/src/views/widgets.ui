@@ -1,0 +1,58 @@
+<template>
+    <ColumnLayout>
+        <MenuBar>
+            <Menu Text="Menu1">
+                <MenuItem Text="SubMenu1" />
+            </Menu>
+        </MenuBar>
+        <GroupBox Title="displays" Pack.Fill="both" Pack.Pady="0 5">
+            <RowLayout>
+                <Label Text="I'm label" Pack.Fill="both" />
+                <Image Source="../assets/tcl_tk.png" Width="300" Height="300" Pack.Fill="both" Pack.Expand="True" />
+                <ProgressBar Value="30" Pack.Fill="x" />
+            </RowLayout>
+        </GroupBox>
+        <GroupBox Title="table" Pack.Fill="both" Pack.Expand="True">
+            <Table Editable="True">
+                <TableHeader>
+                    <TableColumn Text="column {idx}" For="idx in table_columns" />
+                </TableHeader>
+                <TableBody>
+                    <TableRow For="ridx in table_rows">
+                        <TableItem Value="item {ridx}_{cidx}" For="cidx in table_columns" />
+                    </TableRow>
+                </TableBody>
+            </Table>
+        </GroupBox>
+        <GroupBox Title="controls">
+            <ColumnLayout>
+                <RowLayout Pack.Pady="0 5">
+                    <Input Text="I'm input" />
+                    <Range Value="70" />
+                    <Select Index="0" Value="select item 4">
+                        <SelectItem Value="select item {idx + 1}" For="idx in range(select_nums)" />
+                    </Select>
+                </RowLayout>
+                <RowLayout Pack.Pady="0 5">
+                    <Button Text="I'm button {idx + 1}" For="idx in range(3)" Pack.Padx="0 5" />
+                    <Button Text="ho!" Command="incr_cols" Pack.Padx="0 5" />
+                    <CheckButton Text="I'm checkbutton" />
+                </RowLayout>
+                <RowLayout>
+                    <RadioButton Text="radio on" />
+                    <RadioButton Text="radio off" />
+                </RowLayout>
+            </ColumnLayout>
+        </GroupBox>
+    </ColumnLayout>
+</template>
+
+<script>
+class Widgets(Component):
+    select_nums = 4
+    table_columns = [ 1, 2, 3 ]
+    table_rows = [ 1, 2, 3 ]
+
+    def incr_cols(self):
+        self.table_columns.append(len(self.table_columns) + 1)
+</script>
