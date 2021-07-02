@@ -1,11 +1,10 @@
 # PyTkGui
-<a href="https://pypi.python.org/pypi/PyTkGui"><img src="https://img.shields.io/pypi/v/PyTkGui.svg"></img></a>
-<a href="https://travis-ci.com/eseunghwan/PyTkGui"><img src="https://img.shields.io/travis/eseunghwan/PyTkGui.svg"></img></a>
-
-<br><br>
-
 <img src="https://raw.githubusercontent.com/eseunghwan/PyTkGui/master/tests/test_index.png"></img>
 <img src="https://raw.githubusercontent.com/eseunghwan/PyTkGui/master/tests/test_widgets.png"></img>
+
+<br>
+<a href="https://pypi.python.org/pypi/PyTkGui"><img src="https://img.shields.io/pypi/v/PyTkGui.svg"></img></a>
+<a href="https://travis-ci.com/eseunghwan/PyTkGui"><img src="https://img.shields.io/travis/eseunghwan/PyTkGui.svg"></img></a>
 
 <br><br>
 
