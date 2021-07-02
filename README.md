@@ -4,8 +4,8 @@
 
 <br><br>
 
-<img src=""></img>
-<img src=""></img>
+<img src="https://raw.githubusercontent.com/eseunghwan/PyTkGui/master/tests/test_index.png"></img>
+<img src="https://raw.githubusercontent.com/eseunghwan/PyTkGui/master/tests/test_widgets.png"></img>
 
 <br><br>
 
